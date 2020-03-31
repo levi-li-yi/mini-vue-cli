@@ -9,9 +9,9 @@ const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 const config = merge(webpackBaseConfig, {
     devServer: {
-        //contentBase: path.join(__dirname, 'src'),
+        contentBase: path.join(__dirname, 'src'),
         host: 'localhost',
-        port: 8083,
+        port: 8085,
         hot: true,
         compress: true,
         noInfo: true,

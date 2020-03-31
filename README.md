@@ -9,7 +9,7 @@ mini-vue-cli
       NODE_ENV 当前的环境变量
   */
 
-* 依赖资源及用途
+* 依赖资源及用途1
   npm install css-loader style-loader postcss-loader url-loader babel-loader  @babel/preset-env @babel/core sass-loader node-sass responsive-loader vue-loader eslint-loader mini-css-extract-plugin autoprefixer VueLoaderPlugin @moohng/postcss-px2vw -D
 
   css-loader style-loader 用于处理css
@@ -22,3 +22,11 @@ mini-vue-cli
   babel-loader @babel/preset-env @babel/core 处理js兼容
   url-loader responsive-loader 处理图片，小于一定大小转成base64
   eslint-loader eslint-config-standard eslint-plugin-vue 对js vue进行语法检查，采用eslint-config-standard规范，不想要的可以忽略
+
+  *依赖资源及用途2(build)
+  /*
+  clean-webpack-plugin 每次打包的时候清除掉之前打包的
+  terser-webpack-plgugin 对代码做混淆压缩，去掉console日志
+  optimize-css-assets-webpack-plugin 压缩css
+  progress-bar-webpack-plugin 以进度条的形式输出打包日志
+  */

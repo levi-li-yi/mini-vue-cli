@@ -47,20 +47,22 @@ module.exports = {
             {
                 test: /\.js$/,
                 exclude: /node_modules/,
-                use: ['babel-loader', 'eslint-loader']
+                use: ['babel-loader']
             },
-            {
+            /*{
                 enforce: 'pre',
                 test: /\.js$/,
                 loader: 'eslint-loader',
                 exclude: /node_modules/
-            }
+            }*/
         ]
     },
     resolve: {
         alias: {
             '@': path.resolve(__dirname, 'src'),
-            '~': path.resolve(__dirname, 'src/assets')
+            '~': path.resolve(__dirname, 'src/assets'),
+            // 将默认的运行时模式修改为编译模式
+            'vue$': 'vue/dist/vue.esm.js'
         },
         // false可以不带扩展
         enforceExtension: false,
